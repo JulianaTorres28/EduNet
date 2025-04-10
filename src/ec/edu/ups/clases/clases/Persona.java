@@ -1,5 +1,6 @@
 package ec.edu.ups.clases.clases;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Persona {
@@ -10,7 +11,9 @@ public class Persona {
     private String correoElectronico;
     private List<Direccion> direcciones; //estos no se agregan getter y setters
 
-    public Persona(){}
+    public Persona(){
+        this.direcciones = new ArrayList<>();
+    }
 
     public Persona(String cedula, String nombre, String apellido, String telefono, String correoElectronico) {
         this.cedula = cedula;
@@ -18,6 +21,7 @@ public class Persona {
         this.apellido = apellido;
         this.telefono = telefono;
         this.correoElectronico = correoElectronico;
+        this.direcciones = new ArrayList<>();
     }
 
     public String getCedula() {
@@ -69,7 +73,7 @@ public class Persona {
     }//con esto ya se obtiene todas las direcciones
 
     @Override
-    public String toString() {//siempre para que se imprima correctamente
+    public String toString() {
         return "Persona{" +
                 "cedula='" + cedula + '\'' +
                 ", nombre='" + nombre + '\'' +

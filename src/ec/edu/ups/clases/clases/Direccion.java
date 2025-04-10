@@ -14,6 +14,7 @@ public class Direccion {
 
     public Direccion(){}
 
+    //en los contructres no debo pasar las listas ya que son dependientes
     public Direccion(TipoDireccion tipoDireccion, String callePrincipal, String calleSecundaria, String numeracion, String ciudad, String provincia, String pais) {
         this.tipoDireccion = tipoDireccion;
         this.callePrincipal = callePrincipal;
